@@ -1,6 +1,4 @@
-**PCA-Based Object Motion Detection  
-and Dimensionality Reduction in MATLAB 
-Using Background Subtraction (SVD/PCA) and Clustering **
+**PCA-Based Object Motion Detection and Dimensionality Reduction in MATLAB Using Background Subtraction (SVD/PCA) and Clustering**
 ========================================
 
 by J. Barhydt
@@ -92,8 +90,10 @@ background images, as it builds a matrix sum using a different
 constraint, seen below in Equation 1.
 
 > minimize
+> <img src="media/image6.png" width="73" height="11">
 > [![](C:\Users\Johnathon\Documents\media/media/image9.png){width="0.9444444444444444in"
 > height="0.1527777777777778in"}](about:blank) s.t.
+> <img src="media/image6.png" width="73" height="11">
 > [![](C:\Users\Johnathon\Documents\media/media/image16.png){width="0.75in"
 > height="0.125in"}](about:blank) (1)
 
@@ -122,6 +122,7 @@ of motion is more-or-less known in this case \--see Equation 2\-- we
 would expect there to exist a basis from which there would be only one
 dimension to consider, the z-direction.
 
+> <img src="media/image6.png" width="73" height="11">
 > [![](C:\Users\Johnathon\Documents\media/media/image4.png){width="1.0833333333333333in"
 > height="0.1527777777777778in"}](about:blank) (2)
 
@@ -137,6 +138,7 @@ diagonal elements representing the variance of each measurement, along
 with off-diagonals corresponding to the relative variance between any
 two measurements.
 
+> <img src="media/image6.png" width="73" height="11">
 > [![](C:\Users\Johnathon\Documents\media/media/image8.png){width="0.7916666666666666in"
 > height="0.1527777777777778in"}](about:blank) (3)
 
@@ -147,6 +149,7 @@ from our data represent the underlying structures, in which we would
 expect to see a cosine-like structure in the first r columns, where r is
 the reduced dimensionality.
 
+> <img src="media/image6.png" width="73" height="11">
 > [![](C:\Users\Johnathon\Documents\media/media/image11.png){width="0.7222222222222222in"
 > height="0.1111111111111111in"}](about:blank) (4)
 
@@ -273,6 +276,7 @@ the paint can even with the naked eye. To illustrate this, figure 4
 shows an SVD background at frame 150, can *you* find the can? Sorta, but
 our brains are clearly super robust at performing PCA!
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image15.jpg){width="4.645833333333333in"
 height="7.625in"}
 
@@ -280,23 +284,28 @@ height="7.625in"}
 background mask shown on left and x, y coordinate results shown on
 right.**
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image6.png){width="5.807292213473316in"
 height="2.2350754593175854in"}
 
 **Figure 3. Result of blob to average moving window performance in noisy
 data for position extraction.**
 
+> <img src="media/image6.png" width="73" height="11">
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image5.png){width="2.057292213473316in"
 height="1.5788517060367455in"}
 
 **Figure 4. Still background SVD subtraction image at frame \#150.**
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image14.png){width="4.369792213473316in"
 height="3.288246937882765in"}
 
 **Figure 5. Trial 1 Reduced-dimension oscillation behavior (below)
 showing one dominant mode (above).**
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image1.png){width="2.498413167104112in"
 height="1.953125546806649in"}![](C:\Users\Johnathon\Documents\media/media/image7.png){width="3.213542213473316in"
 height="2.479903762029746in"}
@@ -304,15 +313,21 @@ height="2.479903762029746in"}
 **Figure 6.Comparison between raw location information (left) and PCA
 modes (right) of Trial 2.**
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image2.png){width="2.4536023622047245in"
-height="2.2656255468066493in"}![](C:\Users\Johnathon\Documents\media/media/image12.png){width="3.25in"
+height="2.2656255468066493in"}
+> <img src="media/image6.png" width="73" height="11">
+![](C:\Users\Johnathon\Documents\media/media/image12.png){width="3.25in"
 height="2.4426104549431322in"}
 
 **Figure 7.Comparison between raw location information (left) and PCA
 modes (right) of Trial 3.**
 
+> <img src="media/image6.png" width="73" height="11">
 ![](C:\Users\Johnathon\Documents\media/media/image13.png){width="2.3687849956255467in"
-height="1.7864588801399826in"}![](C:\Users\Johnathon\Documents\media/media/image10.png){width="3.338020559930009in"
+height="1.7864588801399826in"}
+> <img src="media/image6.png" width="73" height="11">
+![](C:\Users\Johnathon\Documents\media/media/image10.png){width="3.338020559930009in"
 height="2.5677088801399823in"}
 
 **Figure 8.Comparison between raw location information (left) and PCA
@@ -323,8 +338,8 @@ Dimensionality Reduction (Trials 1-4)
 
 The following settings were used to capture the graphs above:
 
-Trial 1: mode='clean' lambda=0.005
-
+> Trial 1: mode='clean' lambda=0.005
+>
 > Trial 2:mode='noisy' lambda=0.005
 >
 > Trial 3:mode='noisy' x1 lambda=0.005, x2 lambda=0.01, x3 lambda=0.01
