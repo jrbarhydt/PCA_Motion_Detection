@@ -62,9 +62,7 @@ determine the dimension-reduced object location over the entire video.
 Comparisons are shown of the performance of each method and
 ability/limitations of the PCA method.
 
-<img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image3.png){width="5.369792213473316in"
-height="1.4371073928258968in"}
+<img src="media/image3.png" width="537" height="143">
 
 > **Figure 1. Snapshot from original video of paint can at its lowest
 > point, taken from three vantage points.**
@@ -90,12 +88,9 @@ background images, as it builds a matrix sum using a different
 constraint, seen below in Equation 1.
 
 > minimize
-> <img src="media/image6.png" width="73" height="11">
-> [![](C:\Users\Johnathon\Documents\media/media/image9.png){width="0.9444444444444444in"
-> height="0.1527777777777778in"}](about:blank) s.t.
-> <img src="media/image6.png" width="73" height="11">
-> [![](C:\Users\Johnathon\Documents\media/media/image16.png){width="0.75in"
-> height="0.125in"}](about:blank) (1)
+> <img src="media/image9.png" width="94" height="15">
+> s.t.
+> <img src="media/image16.png" width="75" height="13"> (1)
 
 Here L represents the low-rank reconstruction, with the normalization to
 each measurements set from PCA and S represents a sparse matrix, our
@@ -122,9 +117,7 @@ of motion is more-or-less known in this case \--see Equation 2\-- we
 would expect there to exist a basis from which there would be only one
 dimension to consider, the z-direction.
 
-> <img src="media/image6.png" width="73" height="11">
-> [![](C:\Users\Johnathon\Documents\media/media/image4.png){width="1.0833333333333333in"
-> height="0.1527777777777778in"}](about:blank) (2)
+> <img src="media/image4.png" width="108" height="15"> (2)
 
 Where A is the amplitude of the oscillation, corresponding to the
 initial separation from equilibrium, and w is the frequency. If one
@@ -138,9 +131,7 @@ diagonal elements representing the variance of each measurement, along
 with off-diagonals corresponding to the relative variance between any
 two measurements.
 
-> <img src="media/image6.png" width="73" height="11">
-> [![](C:\Users\Johnathon\Documents\media/media/image8.png){width="0.7916666666666666in"
-> height="0.1527777777777778in"}](about:blank) (3)
+> <img src="media/image8.png" width="79" height="15"> (3)
 
 It is here that the value of SVD comes into play. Performing a SVD of
 these data deconstructs the data matrix X into three components, seen
@@ -149,9 +140,7 @@ from our data represent the underlying structures, in which we would
 expect to see a cosine-like structure in the first r columns, where r is
 the reduced dimensionality.
 
-> <img src="media/image6.png" width="73" height="11">
-> [![](C:\Users\Johnathon\Documents\media/media/image11.png){width="0.7222222222222222in"
-> height="0.1111111111111111in"}](about:blank) (4)
+> <img src="media/image11.png" width="72" height="11"> (4)
 
 This dimensionality reduction can be seen in the spectrum of sigma,
 containing diagonal elements that represent the 'weighting' of each of
@@ -163,6 +152,7 @@ relates to one another, and a diagonal covariance matrix mean that we
 are representing our data in a basis of statistically independent modes.
 In the 1D example above, we expect the systems to collapse into a single
 dominant mode.
+
 
 # Algorithm Implementation and Development
 =====================================================
@@ -276,62 +266,40 @@ the paint can even with the naked eye. To illustrate this, figure 4
 shows an SVD background at frame 150, can *you* find the can? Sorta, but
 our brains are clearly super robust at performing PCA!
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image15.jpg){width="4.645833333333333in"
-height="7.625in"}
+> <img src="media/image15.png" width="465" height="763">
 
-**Figure 2. Background subtraction to paint can location comparison with
-background mask shown on left and x, y coordinate results shown on
-right.**
+> **Figure 2. Background subtraction to paint can location comparison with
+> background mask shown on left and x, y coordinate results shown on
+> right.**
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image6.png){width="5.807292213473316in"
-height="2.2350754593175854in"}
+> <img src="media/image6.png" width="581" height="224">
 
-**Figure 3. Result of blob to average moving window performance in noisy
-data for position extraction.**
+> **Figure 3. Result of blob to average moving window performance in noisy
+> data for position extraction.**
 
-> <img src="media/image6.png" width="73" height="11">
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image5.png){width="2.057292213473316in"
-height="1.5788517060367455in"}
+> <img src="media/image5.png" width="206" height="158">
 
-**Figure 4. Still background SVD subtraction image at frame \#150.**
+> **Figure 4. Still background SVD subtraction image at frame \#150.**
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image14.png){width="4.369792213473316in"
-height="3.288246937882765in"}
+> <img src="media/image14.png" width="437" height="329">
 
-**Figure 5. Trial 1 Reduced-dimension oscillation behavior (below)
-showing one dominant mode (above).**
+> **Figure 5. Trial 1 Reduced-dimension oscillation behavior (below)
+> showing one dominant mode (above).**
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image1.png){width="2.498413167104112in"
-height="1.953125546806649in"}![](C:\Users\Johnathon\Documents\media/media/image7.png){width="3.213542213473316in"
-height="2.479903762029746in"}
+> <img src="media/image1.png" width="250" height="195"> <img src="media/image7.png" width="321" height="248">
 
-**Figure 6.Comparison between raw location information (left) and PCA
-modes (right) of Trial 2.**
+> **Figure 6.Comparison between raw location information (left) and PCA
+> modes (right) of Trial 2.**
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image2.png){width="2.4536023622047245in"
-height="2.2656255468066493in"}
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image12.png){width="3.25in"
-height="2.4426104549431322in"}
+> <img src="media/image2.png" width="245" height="227"> <img src="media/image12.png" width="325" height="244">
 
-**Figure 7.Comparison between raw location information (left) and PCA
-modes (right) of Trial 3.**
+> **Figure 7.Comparison between raw location information (left) and PCA
+> modes (right) of Trial 3.**
 
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image13.png){width="2.3687849956255467in"
-height="1.7864588801399826in"}
-> <img src="media/image6.png" width="73" height="11">
-![](C:\Users\Johnathon\Documents\media/media/image10.png){width="3.338020559930009in"
-height="2.5677088801399823in"}
+> <img src="media/image13.png" width="237" height="179"> <img src="media/image10.png" width="339" height="257">
 
-**Figure 8.Comparison between raw location information (left) and PCA
-modes (right) of Trial 4.**
+> **Figure 8.Comparison between raw location information (left) and PCA
+> modes (right) of Trial 4.**
 
 Dimensionality Reduction (Trials 1-4)
 -------------------------------------
