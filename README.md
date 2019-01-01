@@ -367,8 +367,7 @@ windowing, especially for videos with diagonal or rapid movement.
 
 
 
-
-
+========================================
 
 # APPENDIX A 
 (MATLAB Functions Used / Description With Example)
