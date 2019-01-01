@@ -1,7 +1,7 @@
 **PCA-Based Object Motion Detection and Dimensionality Reduction in MATLAB Using Background Subtraction (SVD/PCA) and Clustering**
 ========================================
 
-by J. Barhydt
+by J. Barhydt<sup>1</sup>
 
 *University of Washington, Seattle, WA, 98195*
 
@@ -28,6 +28,7 @@ by J. Barhydt
 - [APPENDIX A\| MATLAB Functions Used](#appendix-a)
 - [APPENDIX B\| MATLAB Code](#appendix-b)
 
+<sub>1- This code uses Inexact ALM rPCA: [[http://perception.csl.illinois.edu/matrix-rank/Files/inexact\_alm\_rpca.zip]](http://perception.csl.illinois.edu/matrix-rank/Files/inexact_alm_rpca.zip). </sub>
 
 # Introduction and Overview
 ==================================
