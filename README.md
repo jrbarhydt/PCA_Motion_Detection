@@ -363,13 +363,16 @@ A dynamic window scale could help to prevent this, along with predictive
 windowing, especially for videos with diagonal or rapid movement.
 
 
+
+
+
+
+
+
+
 # APPENDIX A 
 (MATLAB Functions Used / Description With Example)
 =============================================================
-
-APPENDIX A (MATLAB Functions Used / Description With Example)
-=============================================================
-
 function \[x,y\] = vid2pos(A,mode,slices,lambda,fail)
 
 \%This program takes in a matrix of video frames and attempts to find
