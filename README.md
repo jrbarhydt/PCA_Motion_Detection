@@ -266,7 +266,7 @@ the paint can even with the naked eye. To illustrate this, figure 4
 shows an SVD background at frame 150, can *you* find the can? Sorta, but
 our brains are clearly super robust at performing PCA!
 
-> <img src="media/image15.png" width="465" height="763">
+> <img src="media/image15.jpg" width="465" height="763">
 
 > **Figure 2. Background subtraction to paint can location comparison with
 > background mask shown on left and x, y coordinate results shown on
